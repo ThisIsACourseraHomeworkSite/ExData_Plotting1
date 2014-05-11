@@ -1,6 +1,6 @@
 # open data and label
 classes = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")
-power = read.table(file = "E:/Coursera/RCompData/household_power_consumption.csv", sep = ';', colClasses = classes, header= TRUE, na.strings="?")
+power = read.table(file = "household_power_consumption.csv", sep = ';', colClasses = classes, header= TRUE, na.strings="?")
 
 # use only data for dates 2007-02-01 and 2007-02-02
 pow = power[power$Date == "1/2/2007" | power$Date == "2/2/2007",]
