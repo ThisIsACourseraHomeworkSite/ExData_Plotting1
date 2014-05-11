@@ -12,8 +12,9 @@ plot(pow$datetime, pow$Sub_metering_1, xlab="", ylab = "Energy sub metering", co
 lines(pow$datetime, pow$Sub_metering_1, col = "black")
 lines(pow$datetime, pow$Sub_metering_2, col = "red")
 lines(pow$datetime, pow$Sub_metering_3, col = "blue")
-legend("topright", legend = c("Sub_metering_1","Sub_metering_2             ", "Sub_metering_3             "), 
-       lwd = c(2, 2, 2), col=c("black", "red", "blue"), cex = 1,
-       lty = c(1,1,1))
+  #I had a hard time getting the legend to look right; this is a hack, but it appears close to the assignment
+legend("topright", legend = c("Sub_metering_1", "", "Sub_metering_2","", "Sub_metering_3", ""), 
+       lwd = c(1,0, 1,0, 1, 0), col=c("black", "red", "blue"), cex = .9,
+       lty = c(1,0,1,0,1,0), text.width = 53000)
 dev.copy(png, file = "plot3.png", width = 480, height = 480)
 dev.off()
